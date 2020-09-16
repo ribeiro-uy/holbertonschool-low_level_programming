@@ -1,5 +1,4 @@
 #include <stdio>
-
 /*
  *
  *Task 6
