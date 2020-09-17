@@ -1,15 +1,15 @@
-#include <stdio>
+#include <stdio.h>
 /*
  *
- *Task 6
+ *Task 6 main
  *
  */
 int main(void)
 {
-	printf("The size of a char: %i\n", sizeof(c));
-	printf("The size of an int:%i\n", sizeof(i));
-	printf("The size of a long int:%i\n", sizeof(ld));
-	printf("The size of a long long int:%i\n", sizeof(lld));
-	printf("Size of a float:%i\n", sizeof(f));
+	printf("Size of a char: %i byte(s)\n", sizeof(char));
+	printf("Size of an int: %i byte(s)\n", sizeof(int));
+	printf("Size of a long int: %i byte(s)\n", sizeof(long int));
+	printf("Size of a long long int: %i byte(s)\n", sizeof(long long int));
+	printf("Size of a float: %i byte(s)\n", sizeof(float));
 	return (0);
 }
