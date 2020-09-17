@@ -5,8 +5,19 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
+
 {
-	int lower = 97;
-	int upper = 65;
+	char lower = 'a';
+	char upper = 'A';
+
+	while (lower <= 'z')
+	{
+		putchar(lower++);
+	}
+	while (upper <= 'Z')
+	{
+		putchar(upper++);
+	}
+	return (0);
+}
