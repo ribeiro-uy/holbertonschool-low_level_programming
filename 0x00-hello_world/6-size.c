@@ -1,7 +1,8 @@
 #include <stdio.h>
 /*
  *
- *Task 6 main
+ *Task 6
+ * Size is not grandeur, and territory does not make a nation
  *
  */
 int main(void)
