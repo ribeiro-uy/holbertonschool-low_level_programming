@@ -1,12 +1,15 @@
 #include <stdio.h>
-/*
+
+/**
+ * main - Entry point
  *
- *Task 6
- * Size is not grandeur, and territory does not make a nation
- *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
+
 {
+
 	printf("Size of a char: %i byte(s)\n", sizeof(char));
 	printf("Size of an int: %i byte(s)\n", sizeof(int));
 	printf("Size of a long int: %i byte(s)\n", sizeof(long int));
