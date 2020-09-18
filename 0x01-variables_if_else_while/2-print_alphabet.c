@@ -8,11 +8,12 @@
 int main(void)
 
 {
-	char alphabet = 'a';
+	int alphabet = 97;
 
-	while (alphabet <= 'z')
+	while (alphabet <= 122)
 	{
 		putchar(alphabet++);
 	}
+	putchar(10);
 	return (0);
 }
