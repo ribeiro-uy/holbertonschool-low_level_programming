@@ -1,18 +1,16 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _abs - return the absolute number
  *
  * Return: Always 0.
  */
 
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	if (n < 0)
 	{
-		_putchar(n *-1);
+		_putchar(n * -1);
 	}
 	else
 	{
