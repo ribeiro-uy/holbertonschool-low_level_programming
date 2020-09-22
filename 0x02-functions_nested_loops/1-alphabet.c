@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * Main - check the code for Holberton School students.
+ * Write a function that prints the alphabet, in lowercase,
+ * followed by a new line
  * Return: Always 0.
  */
 
