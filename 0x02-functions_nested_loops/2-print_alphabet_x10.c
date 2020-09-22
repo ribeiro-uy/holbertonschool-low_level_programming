@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * print_alphabet_x10 - print the alphabet 10 lines.
  *
- * Return: Always 0.
+ * Print_alphabet_x10 - Print the alphabet 10 lines.
  */
 
 void print_alphabet_x10(void)
