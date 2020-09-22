@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _islower - check if charater is lower.
+ * @c: input value
  * Return: Always 0.
  */
 
