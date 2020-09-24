@@ -1,29 +1,29 @@
 #include "holberton.h"
 
 /**
- * more_numbers - function description
- *
- *
- *
- *
+ * more_numbers - prints 10 times the numbers
  *
  *
  */
 
 void more_numbers(void)
-{
-	int numero, veces;
 
-	for (veces = 0; veces <= 10; veces++)
+{
+	int veces, linea;
+
+	for (veces = '0'; veces <= '9'; veces++)
 	{
-		for (numero = 0; numero <= 14; numero++)
+		for (linea = 0; linea <= 14; linea++)
+
 		{
-			if (numero > 9)
+			if (linea > 9)
 			{
-				_putchar(numero / 10 + '0' );
+				_putchar(linea / 10 + '0');
 			}
-			_putchar(numero % 10 + '0');
+			_putchar(linea % 10 + '0');
 		}
 		_putchar('\n');
+
+
 	}
 }
