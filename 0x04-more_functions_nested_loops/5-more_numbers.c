@@ -12,19 +12,17 @@
 
 void more_numbers(void)
 {
-	int numero, veces, unidad, decena;
+	int numero, veces;
 
 	for (veces = 0; veces <= 10; veces++)
 	{
 		for (numero = 0; numero <= 14; numero++)
 		{
-			if (numero >= 10)
+			if (numero > 9)
 			{
-				decena = (numero / 10);
-				_putchar(decena + '0');
+				_putchar(numero / 10 + '0' );
 			}
-			unidad = (numero % 10);
-			_putchar(unidad + '0');
+			_putchar(numero % 10 + '0');
 		}
 		_putchar('\n');
 	}
