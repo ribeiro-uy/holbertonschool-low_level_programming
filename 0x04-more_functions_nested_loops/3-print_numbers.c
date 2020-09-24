@@ -8,12 +8,13 @@
  * Return: Always 0.
  */
 
-void print_numbers(void num)
+void print_numbers(void)
 {
+	int num;
 
-	for (n = 0; n <= 9; n++)
+	for (num = 0; num <= 9; num++)
 	{
-		_putchar(n + '0');
+		_putchar(num + '0');
 	}
 
 	_putchar('\n');
