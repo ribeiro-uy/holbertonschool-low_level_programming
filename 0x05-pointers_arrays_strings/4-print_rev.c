@@ -1,7 +1,8 @@
 #include "holberton.h"
 
 /**
-* _print_rev - function that prints a string, followed by a new line.
+* print_rev - function that prints a string, in reverse,
+* followed by a new line
 * @s: string pointer
 * Return: Always 0.
 */
