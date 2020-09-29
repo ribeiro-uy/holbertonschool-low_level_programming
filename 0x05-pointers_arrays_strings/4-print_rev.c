@@ -11,12 +11,14 @@ void print_rev(char *s)
 {
 	int tope;
 
-	while (*(s + tope) != '\0')
+	while (*(s + tope) > '\0')
 	{
 		tope++;
 	}
 
-	while (tope >= 0)
+	s--;
+
+	while (tope > 0)
 	{
 		_putchar(*(s + tope));
 		tope--;
