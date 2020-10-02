@@ -2,30 +2,34 @@
 #include <stdio.h>
 
 /**
- * cap_string - function that capitalizes all words of a string.
+ * letter - function that capitalizes all words of a string.
  * @letter: character
  * Return: Always 0.
  */
 
 char *cap_string(char *letter)
 {
-	int counter;
+	int counter, counter2;
+	char separator[] = " \t\n,;.!?""(){}";
+
+	if (letter[0] >= 'a' && letter[0] <= 'z')
+		letter[0] -= 32;
 
 	for (counter = 0; letter[counter] != '\0'; counter++)
 	{
-		if (letter[counter] == 44 || letter[counter] == 59 ||
-		    letter[counter] == 46 || letter[counter] == 9 ||
-		    letter[counter] == 10 || letter[counter] == 32 ||
-		    letter[counter] == 33 || letter[counter] == 33 ||
-		    letter[counter] == 63 || letter[counter] == 34 ||
-		    letter[counter] == 40 || letter[counter] == 41 ||
-		    letter[counter] == 123 || letter[counter] == 125)
+		for (counter2 = 0; separator[counter2] != '\0'; counter2++)
 		{
-			if (letter[counter +1 ] >= 97 && letter[counter + 1] <= 122)
+			if (letter[counter] == separator[counter2])
 			{
-				letter[counter + 1] = letter[counter + 1] - 32;
+				if (letter[counter + 1] >= 'a' &&
+				    letter[counter + 1] <= 'z')
+				{
+					letter[counter + 1] -= 32;
+					break;
+				}
 			}
 		}
 	}
+
 	return (letter);
 }
