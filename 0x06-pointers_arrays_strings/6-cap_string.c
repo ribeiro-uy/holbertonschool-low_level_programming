@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * letter - function that capitalizes all words of a string.
+ * cap_string - function that capitalizes all words of a string.
  * @letter: character
  * Return: Always 0.
  */
@@ -10,7 +10,7 @@
 char *cap_string(char *letter)
 {
 	int counter, counter2;
-	char separator[] = " \t\n,;.!?""(){}";
+	char separator[] = " \t\n,;.!?\"(){}";
 
 	if (letter[0] >= 'a' && letter[0] <= 'z')
 		letter[0] -= 32;
