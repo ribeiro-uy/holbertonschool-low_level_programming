@@ -15,14 +15,20 @@ unsigned int _strspn(char *s, char *accept)
 
 	int i, ii, x = 0;
 
-	for (i = 0; accept[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (ii = 0; s[ii] != '\0'; ii++)
-			if (s[ii] == accept[i])
+		for (ii = 0; accept[ii] != '\0'; ii++)
+		{
+			if (s[i] == accept[ii])
 			{
 				x++;
-				break;
 			}
+		}
+		if (x > i)
+			continue;
+
+		else
+			break;
 
 	}
 	return (x);
