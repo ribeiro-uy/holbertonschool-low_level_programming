@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strspn - function that gets the length of a prefix substring.
+ * _strpbrk - function that searches a string for any of a set of bytes.
  *
  * @s: string
  *
@@ -16,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 
 	int i, ii;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] >= '\0'; i++)
 	{
 		for (ii = 0; accept[ii] != '\0'; ii++)
 		{
