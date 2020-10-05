@@ -20,19 +20,18 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (needle[0] == haystack[ii])
 			{
-				for (i = 1; needle[i] != '\0' &&  haystack[i + ii] != '\0'; i++)
+				for (i = 1; needle[i] != '\0'; i++)
 				{
 					if (needle[i] != haystack[i + ii])
-						{
-							break;
-						}
-			      	}
+					{
+						break;
+					}
+				}
 			}
 			if (needle[i + 1] == '\0')
 			{
 				return (haystack + ii);
 			}
 		}
-
 	return (NULL);
 }
