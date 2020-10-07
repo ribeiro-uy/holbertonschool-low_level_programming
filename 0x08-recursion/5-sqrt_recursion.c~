@@ -1,0 +1,24 @@
+#include "holberton.h"
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+
+int _sqrt_recursion(int n)
+{
+
+	int i, res = 0;
+
+	if (i > n)
+		return (-1);
+
+	if (res == n)
+		return (res);
+
+	if (res == 0)
+		return (0);
+
+	return (res * (sqrt_recursion(i + i)) res++);
+}
