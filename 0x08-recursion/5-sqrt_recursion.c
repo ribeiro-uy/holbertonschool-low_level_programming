@@ -21,3 +21,15 @@ int _sqrt_recursion(int n)
 		return (helper(n, 2));
 
 }
+
+int helper(int n, int b)
+{
+
+        if (b * b == n)
+                return (b);
+
+        if (b * b > n)
+                return (-1);
+
+        return (helper(n, b + 1));
+}
