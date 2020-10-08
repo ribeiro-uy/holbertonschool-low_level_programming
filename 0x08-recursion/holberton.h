@@ -9,3 +9,4 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int helper(int n, int b);
 int yo(int n, int b);
+int roberto(char *s, int inicio, int fin);
