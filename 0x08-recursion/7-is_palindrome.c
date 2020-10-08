@@ -2,9 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * is_palindrome - function that returns 1 if a string is a palindrome
+ * and 0 if not.
  *
- * Return: Always 0.
+ * @s: string
+ *
+  * Return: Always 0.
  */
 
 int is_palindrome(char *s)
@@ -17,6 +20,11 @@ int is_palindrome(char *s)
 
 /**
  * roberto - function name
+ *
+ * @inicio: first char
+ * @fin: last char
+ * @s: string
+ *
  *
  * Return: Always 0.
  */
