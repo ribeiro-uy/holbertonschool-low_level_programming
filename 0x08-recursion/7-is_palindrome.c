@@ -13,7 +13,7 @@
 int is_palindrome(char *s)
 {
 	int inicio = 0;
-	int fin = strlen(s);
+	int fin = _strlen(s);
 
 	return (roberto(s, inicio, fin - 1));
 }
@@ -42,18 +42,18 @@ int roberto(char *s, int inicio, int fin)
 }
 
 /**
- * strlen - check the code for Holberton School students.
+ * _strlen - check the code for Holberton School students.
  *
  * @s: string
  *
  * Return: Always 0.
  */
 
-int strlen(char *s)
+int _strlen(char *s)
 {
 	if (*s == '\0')
 		return (0);
 
-	return (strlen(s + 1) + 1);
+	return (_strlen(s + 1) + 1);
 
 }
