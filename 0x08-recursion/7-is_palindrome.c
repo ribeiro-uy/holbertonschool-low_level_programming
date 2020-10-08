@@ -40,3 +40,20 @@ int roberto(char *s, int inicio, int fin)
 
 	return (0);
 }
+
+/**
+ * strlen - check the code for Holberton School students.
+ *
+ * @s: string
+ *
+ * Return: Always 0.
+ */
+
+int strlen(char *s)
+{
+	if (*s == '\0')
+		return (0);
+
+	return (strlen(s + 1) + 1);
+
+}
