@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		saldo -= 10;
 		moneda++;
 	}
-	while (saldo  >= 5)
+	while (saldo >= 5)
 	{
 		saldo -= 5;
 		moneda++;
@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 		moneda++;
 	}
 
-	while (saldo == 1)
+	if (saldo == 1)
 	{
 		moneda++;
 	}
