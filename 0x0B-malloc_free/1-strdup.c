@@ -25,16 +25,16 @@ char *_strdup(char *str)
 	{
 	}
 
-	new_str = (char *)malloc(((i + 1)  * sizeof(char)));
-
-	for (ii = 0; ii <= i; ii++)
-	{
-		new_str[ii] = str[ii];
-	}
+	new_str = (char *)malloc(i * sizeof(char) + 1);
 
 	if (new_str == NULL)
 	{
 		return (NULL);
+	}
+
+	for (ii = 0; ii < i; ii++)
+	{
+		new_str[ii] = str[ii];
 	}
 
 	return (new_str);
