@@ -14,7 +14,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *kassadin;
 
-	kassadin = malloc(b * sizeof(unsigned int));
+	kassadin = malloc(b);
 
 	if (kassadin == NULL)
 	{
