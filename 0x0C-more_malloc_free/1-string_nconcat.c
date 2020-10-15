@@ -3,66 +3,18 @@
 #include <stdlib.h>
 
 /**
- * _strlen - function that returns the length of a string.
- * @s: pointer string
- * Return: Always 0.
- */
-
-int _strlen(char *s)
-{
-	int num = 0;
-
-	while (*(s + num) != '\0')
-	{
-		num++;
-	}
-	return (num);
-}
-
-/**
- * _strncat - function that concatenates two strings
+ * string_nconcat - function that concatenates two strings.
  *
- * @dest: destiny
- * @src: src
- * @n: variable
+ * @s1: destiny string
+ * @s2: source string
+ * @n: size
  *
  * Return: Always 0.
  */
-
-char *_strncat(char *dest, char *src, int n)
-{
-	int dest_len;
-	int i;
-
-	for (dest_len = 0; dest[dest_len] != '\0'; dest_len++)
-	{
-	}
-
-	for (i = 0 ; i < n && src[i] != '\0' ; i++)
-	{
-		dest[dest_len + i] = src[i];
-	}
-
-	dest[dest_len + i] = '\0';
-
-	return (dest);
-}
-
-/**
- * string_nconcat - function that concatenates two strings
- *
- * @s1: destiny
- * @s2: src
- * @n: variable
- *
- * Return: Always 0.
- */
-
-
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int s1a, s2a;
+	unsigned int i, ii, j, jj;
 	char *array;
 
 	if (s1 == NULL)
@@ -75,23 +27,31 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	}
 
-	s1a = _strlen(s1);
-	s2a = _strlen(s2);
-
-	if (n >= s2a)
+	for (i = 0; s1[i] != '\0'; i++)
 	{
-		n = s2a;
+	}
+	for (ii = 0; s2[ii] != '\0' && ii < n; ii++)
+	{
 	}
 
-		array = malloc((s1a + n) * sizeof(char));
+	array = malloc(sizeof(char) * (i + ii) + 1);
 
 	if (array == NULL)
 	{
 		return (NULL);
 	}
 
-	_strncat(array, s1, s1a);
-	_strncat(array, s2, n);
+	for (j = 0; s1[j]; j++)
+	{
+		array[j] = s1[j];
+	}
+
+	for (jj = 0; s2[jj] && j < n; jj++)
+	{
+		array[j + jj] = s2[jj];
+	}
+
+	array[j + jj] = '\0';
 
 	return (array);
 }
