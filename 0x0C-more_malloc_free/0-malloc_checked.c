@@ -17,9 +17,8 @@ void *malloc_checked(unsigned int b)
 	kassadin = malloc(b * sizeof(unsigned int));
 
 	if (kassadin == NULL)
-        {
-                exit(98);
-        }
-
+	{
+		exit(98);
+	}
 	return (kassadin);
 }
