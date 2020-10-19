@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - struct dog
@@ -16,4 +16,10 @@ struct dog
 	float age;
 	char *owner;
 };
+
+int _putchar(char c);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+
+
 #endif
