@@ -2,8 +2,11 @@
 #include "function_pointers.h"
 
 /**
- * print_elem - prints an integer
- * @elem: the integer to print
+ * array_iterator - function that searches for an integer.
+ *
+ * @array: the array
+ * @size: size of array
+ * @action: action to do
  *
  * Return: Nothing.
  */
