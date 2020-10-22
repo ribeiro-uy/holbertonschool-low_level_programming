@@ -10,7 +10,7 @@
  * Return: Nothing
  */
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i = 0;
 	unsigned char *p = (char *)main;
@@ -34,4 +34,5 @@ void main(int argc, char *argv[])
 	}
 
 	printf("\n");
+	return (0);
 }
