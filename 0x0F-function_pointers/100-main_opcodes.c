@@ -33,7 +33,6 @@ int main(int argc, char *argv[])
 		i++;
 	}
 
-	printf("%02x ", p[i]);
-	printf("\n");
+	printf("%02x\n", p[i]);
 	return (0);
 }
