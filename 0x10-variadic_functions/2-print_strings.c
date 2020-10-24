@@ -16,8 +16,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list string;
 	unsigned int i;
 
-	if (separator == NULL)
+	if (!separator || n == 0)
 	{
+		printf("\n");
 		return;
 	}
 
