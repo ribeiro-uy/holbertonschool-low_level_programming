@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * __start - unction that prints You're beat! and yet,
@@ -8,7 +9,7 @@
  * Return: Nothing
  */
 
-void __start(void) __attribute__((constructor))
+void __start(void) __attribute__((constructor));
 
 void __start(void)
 {
