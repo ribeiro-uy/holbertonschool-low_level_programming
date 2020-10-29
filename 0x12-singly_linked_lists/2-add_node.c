@@ -11,25 +11,32 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	int i = 0;
+	int len;
+	list_t *new;
 
 	if (head == NULL)
 	{
 		return (0);
 	}
+
+	new = malloc(sizeof(list_t));
+	new->str = strdup(str);
+
+	while (str)
+	{
+		new->len = len;
+		len++;
+	}
+
+	new->next = *head;
+	*head = new;
+
+	if (new == NULL)
+	{
+		return (NULL);
+	}
 	else
 	{
-		struct list_t *new = malloc(sizeof(struct list_t));
-
-		new->str;
-		new->next = head;
-		head = new;
-		if (new == NULL)
-		{
-			return (NULL);
-		}
-		else
-		{
-			return (&new);
-		}
+		return (new);
+	}
 }
