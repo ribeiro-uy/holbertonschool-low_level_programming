@@ -8,7 +8,7 @@
  * Return: Nothing
  */
 
-void __start(void) __attribute__((constructor));
+void __start(void) __attribute__((constructor))
 
 void __start(void)
 {
