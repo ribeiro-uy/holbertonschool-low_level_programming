@@ -29,13 +29,15 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = i;
 	new->next = NULL;
 
+	if (cabezudo)
+	{
+		cabezudo->next = new;
+	}
+
 	if (*head == NULL)
 	{
 		*head = new;
-		return (new);
 	}
-
-	cabezudo->next = new;
 
 	return (new);
 }
