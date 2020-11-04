@@ -1,7 +1,8 @@
 #include "lists.h"
 
 /**
- * pop_listint -  function that adds a new node at the end of a list_t list.
+ * pop_listint - function that deletes the head node of a listint_t linked list,
+ * and returns the head node’s data (n).
  *
  * @head: pointer to a pointer to the head of the list
  *
@@ -20,18 +21,3 @@ int pop_listint(listint_t **head)
 	free(ptr);
 	return (n);
 }
-
-/**
-int pop_listint(listint_t **head)
-{
-        listint_t *ptr = (*head)->next;
-        int n = (*head)->n;
-
-        if (!*head)
-                return (0);
-
-        free(head);
-        *head = ptr;
-        return (n);
-}
-*/
