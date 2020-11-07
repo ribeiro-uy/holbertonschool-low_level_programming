@@ -6,9 +6,10 @@
  * Return: Always 0 (Success)
  */
 
-int main (void)
+int main(void)
 {
 	int alphabet = 97;
+
 	while (alphabet <= 122)
 	{
 		if (alphabet == 101 || alphabet == 113)
@@ -18,5 +19,6 @@ int main (void)
 		putchar(alphabet);
 		alphabet++;
 	}
+	putchar('\n');
 	return (0);
 }
