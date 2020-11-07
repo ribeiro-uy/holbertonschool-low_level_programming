@@ -10,24 +10,24 @@
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *current = *head;
-	listint_t *future = (*head)->next;
-	(*head)->next = NULL;
+	listint_t *current, *future;
 
 	if (*head == NULL)
 		return (NULL);
 
-	if ((*head)->next == NULL)
-		return (*head);
-
-	while (future->next != NULL)
+	if ((*head)->next != NULL)
 	{
-		*head = future;
-		future = future->next;
-		(*head)->next = current;
 		current = *head;
+		future = (*head)->next;
+		current->next = NULL;
+		while (future->next != NULL)
+		{
+			*head = future;
+			future = future->next;
+			(*head)->next = current;
+			current = *head;
+		}
 	}
-
 	*head = future;
 	(*head)->next = current;
 	return (*head);
