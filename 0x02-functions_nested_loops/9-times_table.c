@@ -3,31 +3,53 @@
 /**
  * times_table - prints 9 times table.
  *
- * Return: Always 0.
+ * Return: Nothing.
  */
+
 void times_table(void)
 {
-	int prim, seg, resultado;
+	int tens = 0, ones = 0, result = 0;
 
-	for (prim = 0; prim <= 9; prim++)
+	while (tens <= 9)
 	{
-		for (seg = 0; seg <= 9; seg++)
+		while (ones <= 9)
 		{
-			resultado = prim * seg;
-			if (resultado <= 9)
+			result = tens * ones;
+
+			if (ones == 9)
 			{
-				_putchar(resultado + 48);
+				if (result > 9)
+				{
+					_putchar((result / 10) + '0');
+					_putchar((result % 10) + '0');
+					_putchar('\n');
+				}
+				else
+				{
+					_putchar(result + '0');
+					_putchar('\n');
+				}
+				break;
+			}
+
+			if (result > 9)
+			{
+				_putchar((result / 10) + '0');
+				_putchar((result % 10) + '0');
 				_putchar(',');
-				_putchar(' ');
 				_putchar(' ');
 			}
 			else
 			{
-			       	_putchar((resultado / 10) + 48);
-				_putchar((resultado % 10) + 48);
+				_putchar(result + '0');
 				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 			}
+			ones++;
 		}
-		_putchar('\n');
+		ones = 0;
+		tens++;
 	}
+	_putchar('\n');
 }
