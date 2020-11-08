@@ -26,8 +26,10 @@ putchar(u + '0');
 putchar(' ');
 putchar(decimal + '0');
 putchar(unit + '0');
-if (d == '9' && u == '8' && decimal == '9' && unit == '9')
-{}
+if (d == 9 && u == 8 && decimal == 9 && unit == 9)
+{
+putchar('\n');
+}
 else
 {
 putchar(',');
@@ -45,6 +47,5 @@ u++;
 u = 0;
 d++;
 }
-putchar('\n');
 return (0);
 }
