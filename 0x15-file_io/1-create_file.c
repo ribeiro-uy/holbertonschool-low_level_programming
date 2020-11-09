@@ -9,7 +9,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int i = 0, fd, wwrite, cclose;
+	int i = 0, fd;
 
 	if (filename == NULL)
 		return (-1);
@@ -30,13 +30,11 @@ int create_file(const char *filename, char *text_content)
 		i++;
 	}
 
-	wwrite = write(fd, text_content, i);
-	if (wwrite ==  -1)
+	if (write(fd, text_content, i) == -1)
 		return (-1);
 
-	cclose = close(fd);
-	if (cclose == -1)
+	if (close(fd) == -1)
 		return (-1);
-	
+
 	return (1);
 }
