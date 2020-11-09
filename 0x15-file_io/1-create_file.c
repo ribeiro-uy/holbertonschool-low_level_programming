@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * create_file - function that creates a file.
+ * @filename: file to create or edit
+ * @text_content: text to write in the file
  * Return: Always 0.
  */
 
@@ -29,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 		i++;
 	}
 
-	write(STDIN_FILENO, text_content, i);
+	write(fd, text_content, i);
 
 	close(fd);
 	return (1);
