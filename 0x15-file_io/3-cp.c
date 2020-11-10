@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int leer, escribir, fd1, fd2, close1, close2;
+	int leer, escribir, fd1, fd2;
 	char buff[1024];
 
 	if (argc != 3)
@@ -42,8 +42,8 @@ int main(int argc, char **argv)
 		}
 	}
 	if (close(fd1) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", close1), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd1), exit(100);
 	if (close(fd2) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", close2), exit(100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd2), exit(100);
 	return (0);
 }
