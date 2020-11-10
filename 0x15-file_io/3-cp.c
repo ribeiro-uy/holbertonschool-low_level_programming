@@ -31,13 +31,11 @@ int main(int argc, char **argv)
 		escribir = write(fd2, buff, leer);
 		if (escribir == -1)
 		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			close(fd2);
 			exit(99);
 		}
 		leer = read(fd1, buff, 1024);
 		if (leer == -1)
 		{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			close(fd1);
 			exit(98);
 		}
 	}
