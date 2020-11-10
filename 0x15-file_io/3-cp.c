@@ -32,13 +32,12 @@ int main(int argc, char **argv)
 		close(fd2);
 		exit(99);
 	}
-	while (leer == 1024)
+	while (leer > 0)
 	{
 		leer = read(fd1, buff, 1024);
 		escribir = write(fd2, buff, leer);
 		if (escribir != leer)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+		{dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
 			close(fd2);
 			exit(99);
 		}
