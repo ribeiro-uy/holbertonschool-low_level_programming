@@ -34,7 +34,7 @@ int main(int argc, char **argv)
 	}
 	while (leer == 1024)
 	{
-		leer = read(fd2, buff, 1024);
+		leer = read(fd1, buff, 1024);
 		escribir = write(fd2, buff, leer);
 	}
 	close1 = close(fd1);
