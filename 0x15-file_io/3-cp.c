@@ -15,6 +15,7 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	fd1 = open(argv[1], O_RDONLY);
 	leer = read(fd1, buff, 1024);
+	printf("el primer leer tiene valor: %i", leer);
 	if (fd1 == -1 || leer == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -23,9 +24,10 @@ int main(int argc, char **argv)
 	escribir = write(fd2, buff, leer);
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	while (leer == 1024)
+	while (leer <= 1024 && leer > 0)
 	{
 		leer = read(fd1, buff, 1024);
+		printf("el leer en el while vale: %i\n", leer);
 		escribir = write(fd2, buff, leer);
 		if (escribir != leer)
 		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
