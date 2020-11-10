@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	while (leer <= 1024 && leer > 0)
+	while (leer > 0)
 	{
 		escribir = write(fd2, buff, leer);
 		if (escribir == -1)
