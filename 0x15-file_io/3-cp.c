@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		close(fd1);
 		exit(98);
 	}
-	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
+	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	escribir = write(fd2, buff, leer);
 	if (fd2 == -1 || escribir == -1)
 	{
@@ -36,6 +36,12 @@ int main(int argc, char **argv)
 	{
 		leer = read(fd1, buff, 1024);
 		escribir = write(fd2, buff, leer);
+		if (escribir != leer)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+			close(fd2);
+			exit(99);
+		}
 	}
 	close1 = close(fd1);
 	close2 = close(fd2);
@@ -47,5 +53,5 @@ int main(int argc, char **argv)
 	{dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", close2);
 		exit(100);
 	}
-	return (1);
+	return (0);
 }
