@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 		close(fd1);
 		exit(98);
 	}
-	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 00664);
 	escribir = write(fd2, buff, leer);
 	if (fd2 == -1 || escribir == -1)
 	{
