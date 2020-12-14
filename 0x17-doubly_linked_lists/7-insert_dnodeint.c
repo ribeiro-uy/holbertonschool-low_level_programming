@@ -14,6 +14,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i = 0;
 	dlistint_t *newnode = NULL;
+	size_t size = 0;
 
 	if (h == NULL)
 		return (*h);
@@ -22,6 +23,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		newnode = add_dnodeint(*&h, n);
 		return (newnode);
 	}
+	size = dlistint_len(*h);
+	if (size < idx)
+		return (NULL);
+	if (size == idx)
+		newnode = add_dnodeint_end(*&h, n);
 	while ((*h)->prev)
 		*h = (*h)->prev;
 	while (i <= idx)
@@ -44,4 +50,26 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	newnode = add_dnodeint_end(*&h, n);
 	return (*h);
+}
+
+/**
+ * dlistint_len - function that returns the number of elements
+ * in a linked dlistint_t list.
+ *
+ * @h: pointer to a doble linked list.
+ * Return: number of elements.
+ */
+size_t dlistint_len(const dlistint_t *h)
+{
+	int elements = 0;
+
+	if (h == NULL)
+		return (elements);
+
+	while (h)
+	{
+		elements += 1;
+		h = h->next;
+	}
+	return (elements);
 }
