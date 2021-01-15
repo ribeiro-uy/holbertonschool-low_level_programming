@@ -11,7 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned int i = 0;
 
-	if (ht)
+	if (ht != NULL)
 	{
 		printf("{");
 		while (i <= ht->size)
