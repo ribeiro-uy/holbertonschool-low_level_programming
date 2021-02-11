@@ -1,0 +1,12 @@
+#
+# Project: 0x1C. C - Makefiles
+# Task: 1
+#
+
+# The compiler to be used
+CC = gcc
+# The .c files
+SRC = main.c holberton.c
+
+all : $(SRC)
+	$(CC) $(SRC) -o holberton
