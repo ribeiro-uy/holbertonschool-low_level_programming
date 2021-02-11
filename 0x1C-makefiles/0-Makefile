@@ -1,5 +1,2 @@
-holberton : main.c holberton.c m.h
-
-
-clean :
-	rm holberton
+all : main.c holberton.c m.h
+	gcc main.c holberton.c -o holberton
