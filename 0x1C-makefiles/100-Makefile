@@ -1,0 +1,29 @@
+#
+# Project: 0x1C. C - Makefiles
+# Task: 6
+#
+
+# The compiler to be used
+CC = gcc
+# The .c files
+SRC = main.c holberton.c
+# The .o files
+OBJ = $(SRC:.c=.o)
+# The name of the executable
+NAME = holberton
+# Your favorite compiler flags:
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY: all clean oclean fclean re
+all : $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o  $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
