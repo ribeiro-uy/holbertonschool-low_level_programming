@@ -1,0 +1,28 @@
+#
+# Project: 0x1C. C - Makefiles
+# Task: 3
+#
+
+# The compiler to be used
+CC = gcc
+# The .c files
+SRC = main.c holberton.c
+# The .o files
+OBJ = $(SRC:.c=.o)
+# The name of the executable
+NAME = holberton
+#Remove program
+RM = rm -f
+
+all : $(OBJ)
+	$(CC) $(OBJ) -o  $(NAME)
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
