@@ -1,0 +1,5 @@
+holberton : main.c holberton.c m.h
+
+
+clean :
+	rm holberton
