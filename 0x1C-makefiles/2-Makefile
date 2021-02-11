@@ -1,0 +1,16 @@
+#
+# Project: 0x1C. C - Makefiles
+# Task: 2
+#
+
+# The compiler to be used
+CC = gcc
+# The .c files
+SRC = main.c holberton.c
+# The .o files
+OBJ = $(SRC:.c=.o)
+# The name of the executable
+NAME = holberton
+
+all : $(OBJ)
+	$(CC) $(OBJ) -o  $(NAME)
