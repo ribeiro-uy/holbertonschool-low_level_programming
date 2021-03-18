@@ -8,49 +8,28 @@
 
 void times_table(void)
 {
-	int tens = 0, ones = 0, result = 0;
+	int a, b, res;
 
-	while (tens <= 9)
+	for (a = 0; a < 10 ; a++)
 	{
-		while (ones <= 9)
+		_putchar('0');
+		for (b = 1; b < 10 ; b++)
 		{
-			result = tens * ones;
-
-			if (ones == 9)
+			res = a * b;
+			if (res > 9)
 			{
-				if (result > 9)
-				{
-					_putchar((result / 10) + '0');
-					_putchar((result % 10) + '0');
-					_putchar('\n');
-				}
-				else
-				{
-					_putchar(result + '0');
-					_putchar('\n');
-				}
-				break;
-			}
-
-			if (result > 9)
-			{
-				_putchar((result / 10) + '0');
-				_putchar((result % 10) + '0');
 				_putchar(',');
 				_putchar(' ');
-
+				_putchar(res / 10 + '0');
+				_putchar(res % 10 + '0');
 			}
 			else
 			{
-				_putchar(result + '0');
 				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-			}
-			ones++;
-		}
-		ones = 0;
-		tens++;
+				_putchar (' ');
+				_putchar (' ');
+				_putchar ('0' + res);
+			}}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
