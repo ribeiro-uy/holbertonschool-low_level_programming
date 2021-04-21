@@ -35,12 +35,12 @@ int interpolation_search(int *array, size_t size, int value)
 		while (low <= hi)
 		{
 			print_check(pos, array[pos]);
-			if (array[pos] == value)
-				return (pos);
 			if (array[pos] > value)
 				hi = pos - 1;
-			else
+			else if (array[pos] < value)
 				low = pos + 1;
+			else
+				return (pos);
 			pos = low + (((double)(hi - low) / (array[hi] - array[low])) * (value - array[low]));
 
 		}
