@@ -27,7 +27,7 @@ int jump_search(int *array, size_t size, int value)
 		print_check(idx, array[idx]);
 		return (idx);
 	}
-	while (array[idx] < value && idx < size)
+	while (idx < size && array[idx] < value)
 	{
 		print_check(idx, array[idx]);
 		idx += bloc;
